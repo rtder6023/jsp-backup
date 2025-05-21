@@ -17,13 +17,13 @@
 	String city = request.getParameter("city");
 	
 	String sql = " INSERT INTO member_tbl_02 VALUES (	" +
-				 " 							  '" + custno + "', "   + 
+				 " 							  '" + custno + "',   " + 
 				 " 							  '" + custname + "', " +
-				 " 							  '" + phone + "', "    +
-				 " 							  '" + address + "', "  +
+				 " 							  '" + phone + "',    " +
+				 " 							  '" + address + "',  " +
 				 " 							  '" + joindate + "', " +
-				 " 							  '" + grade + "', "    +								 
-				 " 							  '" + city + "') ";
+				 " 							  '" + grade + "',    " +								 
+				 " 							  '" + city + "')     " ;
 	ResultSet rs = stmt.executeQuery(sql);
 	response.sendRedirect("main.jsp");
 %>

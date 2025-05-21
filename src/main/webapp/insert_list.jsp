@@ -12,18 +12,18 @@
 	request.setCharacterEncoding("UTF-8");
 	Connection conn = Util.getConnection();
 	Statement stmt = conn.createStatement();
-	String sql = " SELECT 	custno AS 회원번호, " +
-		   		 " 			custname AS 회원성명, " +
-				 "		   	phone AS 전화번호, " +
-				 "		   	address AS 주소, " +
+	String sql = " SELECT 	custno AS 회원번호, 						   " +
+		   		 " 			custname AS 회원성명, 						   " +
+				 "		   	phone AS 전화번호, 						   " +
+				 "		   	address AS 주소, 							   " +
 				 "		   	TO_CHAR(joindate, 'YYYY-MM-DD') AS 가입일자, " +
-				 "		   	(CASE grade " +
-				 "		   		WHEN 'A' THEN 'VIP' " +
-				 "		   		WHEN 'B' THEN '일반' " +
-				 "		   		WHEN 'C' THEN '직원' " +
-				 "		   	END) AS 고객등급, 	" +
-				 "		   	city AS 거주지역 " +
-				 " FROM 	member_tbl_02			" ;
+				 "		   	(CASE grade 							   " +
+				 "		   		WHEN 'A' THEN 'VIP' 				   " +
+				 "		   		WHEN 'B' THEN '일반' 					   " +
+				 "		   		WHEN 'C' THEN '직원' 					   " +
+				 "		   	END) AS 고객등급, 							   " +
+				 "		   	city AS 거주지역 							   " +
+				 " FROM 	member_tbl_02							   " ;
 	ResultSet rs = stmt.executeQuery(sql);			
 %>
 </head>

@@ -12,18 +12,18 @@
 	request.setCharacterEncoding("UTF-8");
 	Connection conn = Util.getConnection();
 	Statement stmt = conn.createStatement();
-	String sql = " SELECT 	me.custno AS 회원번호, " +
-		   		 " 			me.custname AS 회원성명, " +
-		   		 " 			(CASE grade " +
-		   		 " 				WHEN 'A' THEN 'VIP' " +
-		   		 " 				WHEN 'B' THEN '일반' " +
-		   		 " 				WHEN 'C' THEN '직원' " +
-		   		 " 			END) AS 고객등급, " +
-		   		 " 			SUM(mo.price) AS 매출 " +
-			 	 " FROM 	member_tbl_02 me " +
+	String sql = " SELECT 	me.custno    AS 회원번호, 					 " +
+		   		 " 			me.custname  AS 회원성명, 					 " +
+		   		 " 			(CASE grade             				 " +
+		   		 " 				WHEN 'A' THEN 'VIP' 				 " +
+		   		 " 				WHEN 'B' THEN '일반' 					 " +
+		   		 " 				WHEN 'C' THEN '직원' 					 " +
+		   		 " 			END) AS 고객등급, 							 " +
+		   		 " 			SUM(mo.price) AS 매출 					 " +
+			 	 " FROM 	member_tbl_02 me 						 " +
 				 " JOIN 	money_tbl_02 mo	ON me.custno = mo.custno " +
-			 	 " GROUP BY me.custno, me.custname, me.grade " +
-				 " ORDER BY 매출 DESC ";
+			 	 " GROUP BY me.custno, me.custname, me.grade 		 " +
+				 " ORDER BY 매출 DESC 								 ";
 	
 	ResultSet rs = stmt.executeQuery(sql);			
 %>

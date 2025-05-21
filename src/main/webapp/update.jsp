@@ -14,13 +14,13 @@
 	String grade = request.getParameter("grade");
 	String city = request.getParameter("city");
 	
-	String sql = " UPDATE member_tbl_02 SET " +
+	String sql = " UPDATE member_tbl_02 SET       " +
             	 " custname = '" + custname + "', " +
-            	 " phone = '" + phone + "', " +
-             	 " address = '" + address + "', " +  
-            	 " grade = '" + grade + "', " + 
-            	 " city = '" + city + "' " +
-            	 " WHERE custno = " + custno;
+            	 " phone = '" + phone + "',       " +
+             	 " address = '" + address + "',   " +  
+            	 " grade = '" + grade + "',       " + 
+            	 " city = '" + city + "'          " +
+            	 " WHERE custno = 				  " + custno;
 
 	// ResultSet rs = stmt.executeQuery(sql);
 	stmt.executeUpdate(sql);  
