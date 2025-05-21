@@ -57,7 +57,7 @@
 	request.setCharacterEncoding("UTF-8");
 	Connection conn = Util.getConnection();
 	Statement stmt = conn.createStatement();
-	String custno = request.getParameter("custno");
+	String custno = request.getParameter("mod_custno");
 	String sql = "SELECT * FROM member_tbl_02 WHERE custno =" + custno;
 	ResultSet rs = stmt.executeQuery(sql);
 	rs.next();
@@ -66,7 +66,7 @@
 
 
 <body>
-<h3>홈쇼핑 회원등록</h3>
+<h3>홈쇼핑 회원 수정</h3>
 <form name="frm" action="update.jsp">
 	<table border="1">
 		<tr>
@@ -96,7 +96,7 @@
 		<tr>
 			<th>가입일자</th>
 			<td align="left">
-				<input style="width: 100px" name='joindate' id='joindate' value='<%=rs.getString("joindate")%>'>
+				<input style="width: 100px" name='joindate' id='joindate' value='<%=rs.getString("joindate")%>' readonly>
 			</td>
 		</tr>
 		<tr>
