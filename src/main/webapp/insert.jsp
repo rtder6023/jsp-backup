@@ -73,7 +73,7 @@
 		<tr>
 			<th>회원번호(자동발생)</th>
 			<td width="400px" align="left">
-				<input style="width: 100px" name='custno' id='custno' value='<%=custno%>' readonly>
+				<input style="width: 100px" name='custno' id='custno' value='<%=custno%>'>
 			</td>
 		</tr>
 		<tr>

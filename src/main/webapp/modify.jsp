@@ -96,7 +96,7 @@
 		<tr>
 			<th>가입일자</th>
 			<td align="left">
-				<input style="width: 100px" name='joindate' id='joindate' value='<%=rs.getString("joindate")%>' readonly>
+				<input style="width: 100px" name='joindate' id='joindate' value='<%=rs.getDate("joindate")%>'>
 			</td>
 		</tr>
 		<tr>

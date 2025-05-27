@@ -16,11 +16,11 @@
 	
 	String sql = " UPDATE member_tbl_02 SET       " +
             	 " custname = '" + custname + "', " +
-            	 " phone = '" + phone + "',       " +
-             	 " address = '" + address + "',   " +  
-            	 " grade = '" + grade + "',       " + 
-            	 " city = '" + city + "'          " +
-            	 " WHERE custno = 				  " + custno;
+            	 " phone    = '" + phone    + "', " +
+             	 " address  = '" + address  + "', " +  
+            	 " grade    = '" + grade    + "', " + 
+            	 " city     = '" + city 	+ "'  " +
+            	 " WHERE custno = 			  " + custno;
 
 	// ResultSet rs = stmt.executeQuery(sql);
 	stmt.executeUpdate(sql);  
