@@ -11,13 +11,15 @@
 	String custname = request.getParameter("custname");
 	String phone = request.getParameter("phone");
 	String address = request.getParameter("address");
+	String joindate = request.getParameter("joindate");
 	String grade = request.getParameter("grade");
 	String city = request.getParameter("city");
 	
 	String sql = " UPDATE member_tbl_02 SET       " +
             	 " custname = '" + custname + "', " +
             	 " phone    = '" + phone    + "', " +
-             	 " address  = '" + address  + "', " +  
+             	 " address  = '" + address  + "', " +
+            	 " joindate = '" + joindate + "', " + 
             	 " grade    = '" + grade    + "', " + 
             	 " city     = '" + city 	+ "'  " +
             	 " WHERE custno = 			  " + custno;
